@@ -21,9 +21,9 @@ public partial class Order
         var message = $"ORDER: ID:{Id}, CustId: {CustomerId}, Date: {Date}, Desc:{Description}, " +
             $"Customer Name: {Customer.Name}";
             foreach(var ol in OrderLines) {
-            message += $"\nORDERLINE: ID: {ol.Id} | PRODUCT: {ol.Product}  | PRICE: {ol.Price} | QUANTITY {ol.Quantity}";
+            message += $"\nORDERLINE: ID: {ol.Id} | PRODUCT: {ol.Product} " +
+                       $" | PRICE: {ol.Price} | QUANTITY {ol.Quantity}";
         }
-
         return message;
     }
 }

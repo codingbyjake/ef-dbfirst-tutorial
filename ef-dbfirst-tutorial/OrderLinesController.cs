@@ -21,7 +21,9 @@ namespace ef_dbfirst_tutorial
         }
 
         public async Task<OrderLine?> GetByIdAsync(int id) {
-            return await _context.OrderLines.FindAsync(id);
+            return await _context.OrderLines
+                                 .Include(x => x.Orders)
+                                 .SingleOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<bool> InsertAsync(OrderLine ordline) {

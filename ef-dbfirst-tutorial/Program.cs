@@ -5,15 +5,22 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
 
+var ordLineCtrl = new OrderLinesController();
 
-var ordCtrl = new OrdersController();
+var ordLine = await ordLineCtrl.GetByIdAsync(1);
+Console.WriteLine(ordLine);
 
-var ord = await ordCtrl.GetByIdAsync(1);
 
-Console.WriteLine(ord);
+//****************Added Customer and OrderLine to Order GetById and Get All
+//****************tested get GetByID and calculated order total
+//var ordCtrl = new OrdersController();
 
-var orderTotal = ord.OrderLines.Sum(x => x.Price * x.Quantity);
-Console.WriteLine($"Order total is {orderTotal:C}");
+//var ord = await ordCtrl.GetByIdAsync(1);
+
+//Console.WriteLine(ord);
+
+//var orderTotal = ord.OrderLines.Sum(x => x.Price * x.Quantity);
+//Console.WriteLine($"Order total is {orderTotal:C}");
 
 //************testing GetByIdAsync in OrdersController plus data from Customer table
 //var ordCtrl = new OrdersController();
