@@ -3,14 +3,69 @@ using ef_dbfirst_tutorial;
 using ef_dbfirst_tutorial.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Http.Headers;
 
 
-//***********testing DeleteAsync
+var ordCtrl = new OrdersController();
+
+var ord = await ordCtrl.GetByIdAsync(1);
+
+Console.WriteLine(ord);
+
+var orderTotal = ord.OrderLines.Sum(x => x.Price * x.Quantity);
+Console.WriteLine($"Order total is {orderTotal:C}");
+
+//************testing GetByIdAsync in OrdersController plus data from Customer table
+//var ordCtrl = new OrdersController();
+
+//var orders = await ordCtrl.GetAllAsync();
+
+//orders.ForEach(ord => Console.WriteLine(ord));
+
+//************testing UpdateAsync in OrderLinesController
+//var ordLineCtrl = new OrderLinesController();
+
+//var ordLine = await ordLineCtrl.GetByIdAsync(82);
+
+//ordLine.OrdersId = 2;
+
+//await ordLineCtrl.UpdateAsync(ordLine);
+
+//************testing InsertAsync in OrderLinesController
+//var ordLineCtrl = new OrderLinesController();
+
+//var ordLine = new OrderLine() {
+//    Id = 0,
+//    OrdersId = 1,
+//    Product = "thing",
+//    Description = "a watchya callit",
+//    Quantity = 1,
+//    Price = 12
+//};
+
+//await ordLineCtrl.InsertAsync(ordLine);
+
+//************testing GetByIdAsync in OrderLinesController
+//var ordLineCtrl = new OrderLinesController();
+//var ordLine = await ordLineCtrl.GetByIdAsync(55);
+//Console.WriteLine(ordLine);
+
+//************testing GetAllAsync in OrderLinesController
+//var ordLineCtrl = new OrderLinesController();
+
+//var ordLines = await ordLineCtrl.GetAllAsync();
+////foreach (OrderLine o in ordLines) {
+////    Console.WriteLine(o);
+////}
+// ordLines.ForEach(ord =>  Console.WriteLine(ord));
+
+
+//***********testing DeleteAsync in OrdersController
 //var ordCtrl = new OrdersController();
 //bool success = await ordCtrl.DeleteAsync(27);
 //Console.WriteLine(success ? "It deleted" : "Failure!!!");
 
-//***********testing UpdateAsync
+//***********testing UpdateAsync in OrdersController
 //var ordCtrl = new OrdersController();
 
 //var order = await ordCtrl.GetByIdAsync(28);
@@ -22,7 +77,7 @@ using System.Diagnostics.CodeAnalysis;
 //Console.WriteLine(success ? "It updated" : "Failure!!!");
 
 
-//*********testing InsertAsync 
+//*********testing InsertAsync in OrdersController
 //var ordCtrl = new OrdersController();
 
 //var order = new Order() {
@@ -59,10 +114,6 @@ using System.Diagnostics.CodeAnalysis;
 //};
 
 //var success = await custCtrl.InsertAsync(cust);
-
-
-
-
 
 //var cust = await custCtrl.GetByIdAsync(1);
 
