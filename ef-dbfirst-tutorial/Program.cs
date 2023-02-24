@@ -5,10 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
 
-var ordLineCtrl = new OrderLinesController();
 
-var ordLine = await ordLineCtrl.GetByIdAsync(1);
-Console.WriteLine(ordLine);
+
+//****************In OrderLinesController added Include x.Orders (virtual Order Orders)
+//****************to GetByID() method and tested in Program.cs
+//var ordLineCtrl = new OrderLinesController();
+
+//var ordLine = await ordLineCtrl.GetByIdAsync(1);
+//Console.WriteLine(ordLine);
 
 
 //****************Added Customer and OrderLine to Order GetById and Get All
