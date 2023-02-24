@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ef-dbfirst-tutorial", "ef-dbfirst-tutorial\ef-dbfirst-tutorial.csproj", "{EB4A9CA0-3916-403D-A48D-33CE11EEF7E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ef-dbfirst-tutorial", "ef-dbfirst-tutorial\ef-dbfirst-tutorial.csproj", "{EB4A9CA0-3916-403D-A48D-33CE11EEF7E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test-ef-dbfirst", "Test-ef-dbfirst\Test-ef-dbfirst.csproj", "{FE1304AD-E6C5-46ED-95C4-84684937D36C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EB4A9CA0-3916-403D-A48D-33CE11EEF7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB4A9CA0-3916-403D-A48D-33CE11EEF7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB4A9CA0-3916-403D-A48D-33CE11EEF7E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE1304AD-E6C5-46ED-95C4-84684937D36C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1304AD-E6C5-46ED-95C4-84684937D36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1304AD-E6C5-46ED-95C4-84684937D36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1304AD-E6C5-46ED-95C4-84684937D36C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
